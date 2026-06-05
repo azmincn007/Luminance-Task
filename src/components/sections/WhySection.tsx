@@ -67,7 +67,7 @@ export default function WhySection() {
           {/* Video placeholder */}
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-16">
             <Image
-              src="/assets/video-placeholder.png"
+              src="/assets/video-placeholder.webp"
               alt="Video placeholder"
               fill
               className="object-cover"

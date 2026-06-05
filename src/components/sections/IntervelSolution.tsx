@@ -5,8 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { solutions } from "../../data/solutions";
 import SolutionCard from "../cards/SolutionCard";
 
-const marbleBg = "/assets/bg-scroll.jpg";
-const interiorBg = "/assets/solutionbg.jpg";
+const marbleBg = "/assets/bg-scroll.webp";
+const interiorBg = "/assets/solutionbg.webp";
 const solutionHeading = "/assets/solutiion-heading.png";
 
 // Total reveal height in vh — single source of truth

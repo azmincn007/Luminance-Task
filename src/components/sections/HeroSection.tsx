@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       <Image
-        src="/assets/section1-img1.png"
+        src="/assets/section1-img1.webp"
         alt="Villa interior"
         fill
         priority

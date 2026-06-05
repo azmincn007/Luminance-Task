@@ -4,13 +4,13 @@ import { useState } from "react";
 const filters = ["All", "Kitchen", "Door", "Closet", "UPVC Windows"];
 
 const gallery = [
-  { src: "/assets/d1.png", alt: "Modern wood kitchen" },
+  { src: "/assets/d1.webp", alt: "Modern wood kitchen" },
   { src: "/assets/d3.jpg", alt: "Window system" },
   { src: "/assets/d4.webp", alt: "Grey kitchen" },
-  { src: "/assets/d5.jpg", alt: "Bright living room" },
+  { src: "/assets/d5.webp", alt: "Bright living room" },
   { src: "/assets/d2.webp", alt: "Glass wardrobe" },
-  { src: "/assets/d6.png", alt: "Classic wooden door" },
-  { src: "/assets/d7.jpg", alt: "Interior room" },
+  { src: "/assets/d6.webp", alt: "Classic wooden door" },
+  { src: "/assets/d7.webp", alt: "Interior room" },
 ];
 
 export default function GallerySection() {

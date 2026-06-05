@@ -27,7 +27,7 @@ export const solutions: Solution[] = [
   {
     title: "Premium Window Systems",
     description: "Sealed systems for better comfort and control",
-    image: "/assets/solution4.jpg",
+    image: "/assets/solution4.webp",
     icon: "/assets/solutionicon4.png",
   },
 ];
