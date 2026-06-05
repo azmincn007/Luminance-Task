@@ -9,7 +9,7 @@ import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InteriorSolutionsReveal from "@/components/sections/IntervelSolution";
-import Report from "@/components/Report";
+
 
 export default function Page() {
   return (
@@ -24,7 +24,7 @@ export default function Page() {
         <WhyChooseSection />
         <TestimonialsSection />
         <ContactSection />
-        <Report/>
+        
       </main>
       <Footer />
     </div>

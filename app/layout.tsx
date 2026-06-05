@@ -5,7 +5,12 @@ export const metadata: Metadata = {
   title: "Ideal Factory — Villa Interiors Made Simple",
   description:
     "Kitchens, closets, doors, and premium uPVC windows designed, manufactured, and installed by one trusted Emirati factory.",
-  authors: [{ name: "Lovable" }],
+  authors: [{ name: "Ideal Factory" }],
+  icons: {
+    icon: "/assets/logo-ideal.png",
+    shortcut: "/assets/logo-ideal.png",
+    apple: "/assets/logo-ideal.png",
+  },
   openGraph: {
     title: "Ideal Factory — Villa Interiors Made Simple",
     description:
@@ -14,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    site: "@Lovable",
+    site: "@IdealFactory",
   },
 };
 
