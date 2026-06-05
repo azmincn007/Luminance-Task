@@ -21,7 +21,7 @@ export const solutions: Solution[] = [
   {
     title: "Wooden Doors",
     description: "Precise finishes that hold up with everyday use",
-    image: "/assets/solution3.png",
+    image: "/assets/solution3.webp",
     icon: "/assets/solutionicon3.png",
   },
   {
