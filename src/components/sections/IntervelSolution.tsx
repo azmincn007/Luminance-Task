@@ -15,20 +15,27 @@ const SECTION_VH = 780;
 // Convert a vh scroll position into 0–1 progress
 const vh = (value: number) => value / SECTION_VH;
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
+function useBreakpoint() {
+  const [bp, setBp] = useState<"mobile" | "tablet" | "desktop">("desktop");
   useEffect(() => {
-    const update = () => setIsMobile(window.innerWidth < breakpoint);
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < 768) setBp("mobile");
+      else if (w < 1024) setBp("tablet");
+      else setBp("desktop");
+    };
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
-  }, [breakpoint]);
-  return isMobile;
+  }, []);
+  return bp;
 }
 
 export default function InteriorSolutionsReveal() {
   const sectionRef = useRef(null);
-  const isMobile = useIsMobile();
+  const bp = useBreakpoint();
+  const isMobile = bp === "mobile";
+  const isTablet = bp === "tablet";
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -44,7 +51,7 @@ export default function InteriorSolutionsReveal() {
   const textScale = useTransform(
     scrollYProgress,
     [vh(0), vh(200), vh(380)],
-    [1, isMobile ? 2 : 3, isMobile ? 5 : 8],
+    [1, isMobile ? 2 : isTablet ? 2.5 : 3, isMobile ? 5 : isTablet ? 6 : 8],
   );
 
   const textY = useTransform(scrollYProgress, [vh(0), vh(380)], ["0%", "-8%"]);
@@ -88,7 +95,7 @@ export default function InteriorSolutionsReveal() {
   const headingY = useTransform(
     scrollYProgress,
     [vh(420), vh(470), vh(490)],
-    [isMobile ? 80 : 200, isMobile ? 78 : 198, 0],
+    [isMobile ? 80 : isTablet ? 110 : 200, isMobile ? 78 : isTablet ? 108 : 198, 0],
   );
 
   // Cards fade in 550–570, hold till 700
@@ -114,8 +121,8 @@ export default function InteriorSolutionsReveal() {
 
   // On mobile portrait the SVG slice-scales by ~0.78×, so 170 SVG units ≈ 133px actual.
   // 55 SVG units ≈ 43px actual — a proportionate starting size that still zooms dramatically.
-  const svgFontSize = isMobile ? 70 : 100;
-  const svgStrokeWidth = isMobile ? "2" : "3";
+  const svgFontSize = isMobile ? 70 : isTablet ? 78 : 100;
+  const svgStrokeWidth = isMobile || isTablet ? "2" : "3";
   const y1 = isMobile ? "45%" : "15%";
   const y2 = isMobile ? "55%" : "25%";
   const y3 = isMobile ? "65%" : "35%";

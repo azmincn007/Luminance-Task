@@ -12,13 +12,15 @@ import InteriorSolutionsReveal from "@/components/sections/IntervelSolution";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background  ">
       <Header />
       <main>
         <HeroSection />
         <InteriorSolutionsReveal />
         {/* <SolutionsSection /> */}
-        <WhySection />
+        <div className="md:px-0 px-4">
+          <WhySection />
+        </div>
         <GallerySection />
         <WhyChooseSection />
         <TestimonialsSection />

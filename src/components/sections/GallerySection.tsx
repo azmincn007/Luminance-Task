@@ -64,8 +64,7 @@ export default function GallerySection() {
             Row 2: [1 ██] [4 ██]
             Row 3: [5 ██] [6] [7]
         */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-3 gap-2 mb-10 lg:max-h-[900px] relative z-20">
-
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-3 gap-2 mb-10 lg:h-[900px] relative z-20">
           {/* 1 - Big kitchen */}
           <div className="col-span-2 lg:row-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-[4/3] lg:aspect-auto">
             <Image

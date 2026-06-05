@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Dark overlay */}
       <div className="absolute inset-0" style={{ background: "#000000A8" }} aria-hidden />
 
-      <div className="relative container mx-auto px-4 max-w-6xl py-14">
+      <div className="relative container mx-auto px-6 md:px-4 max-w-6xl py-14">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           {/* Logo + about */}
           <div className="col-span-2 md:col-span-1">

@@ -56,7 +56,7 @@ export default function ContactSection() {
         className="pointer-events-none absolute right-0 top-0 w-32 md:w-44"
       />
 
-      <div className="relative container mx-auto px-4 max-w-6xl">
+      <div className="relative container mx-auto px-6 md:px-4 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left */}
           <div>

@@ -14,8 +14,8 @@ export default function HeroSection() {
       />
       <div className="" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 pt-40 md:pt-44 pb-20 flex flex-col items-center lg:items-start">
-        <div className="max-w-2xl w-full text-center lg:text-left lg:rounded-2xl lg:bg-[#0E0B0B75] lg:p-10 lg:backdrop-blur-sm">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 pt-40 md:pt-44 pb-20 flex flex-col items-center">
+        <div className="max-w-2xl w-full text-center lg:rounded-2xl lg:bg-[#0E0B0B75] lg:p-10 lg:backdrop-blur-sm">
           <h1 className="font-lexend text-3xl md:text-5xl font-semibold leading-tight text-white">
             Design &amp; Delivery of
             <br />
