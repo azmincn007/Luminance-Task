@@ -10,7 +10,6 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import InteriorSolutionsReveal from "@/components/sections/IntervelSolution";
 
-
 export default function Page() {
   return (
     <div className="min-h-screen bg-background">
@@ -24,7 +23,6 @@ export default function Page() {
         <WhyChooseSection />
         <TestimonialsSection />
         <ContactSection />
-        
       </main>
       <Footer />
     </div>

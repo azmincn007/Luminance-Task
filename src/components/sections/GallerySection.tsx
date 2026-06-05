@@ -52,81 +52,94 @@ export default function GallerySection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-3 gap-2 mb-10 md:max-h-[900px] relative z-20">
-          {/* 1 - Big kitchen: full-width landscape on mobile, 2x2 on desktop */}
-          <div className="col-span-2 md:row-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-[4/3] md:aspect-auto">
+        {/*
+          Mobile  (default, 2 cols): standard stacked pairs
+          Tablet  (md, 3 cols):
+            Row 1: [1 ██] [2]
+            Row 2: [3] [4 ██]
+            Row 3: [5 ██] [6]
+            Row 4: [7 ███]
+          Desktop (lg, 4 cols, fixed height):
+            Row 1: [1 ██] [2] [3]
+            Row 2: [1 ██] [4 ██]
+            Row 3: [5 ██] [6] [7]
+        */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-3 gap-2 mb-10 lg:max-h-[900px] relative z-20">
+
+          {/* 1 - Big kitchen */}
+          <div className="col-span-2 lg:row-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-[4/3] lg:aspect-auto">
             <Image
               src={gallery[0].src}
               alt={gallery[0].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
           {/* 2 - Window */}
-          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-auto">
+          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-[4/3] lg:aspect-auto">
             <Image
               src={gallery[1].src}
               alt={gallery[1].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 50vw, 25vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
 
           {/* 3 - Grey kitchen */}
-          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-auto">
+          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-[4/3] lg:aspect-auto">
             <Image
               src={gallery[2].src}
               alt={gallery[2].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 50vw, 25vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
 
-          {/* 4 - Living room: full-width on mobile, 2x1 on desktop */}
-          <div className="col-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-video md:aspect-auto">
+          {/* 4 - Living room: 2-col on mobile/tablet, 2-col on desktop */}
+          <div className="col-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-video lg:aspect-auto">
             <Image
               src={gallery[3].src}
               alt={gallery[3].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
-          {/* 5 - Closet: full-width on mobile, 2x1 on desktop */}
-          <div className="col-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-video md:aspect-auto">
+          {/* 5 - Closet */}
+          <div className="col-span-2 relative overflow-hidden rounded-md bg-white/5 aspect-video lg:aspect-auto">
             <Image
               src={gallery[4].src}
               alt={gallery[4].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
           {/* 6 - Door */}
-          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-auto">
+          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-[4/3] lg:aspect-auto">
             <Image
               src={gallery[5].src}
               alt={gallery[5].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 50vw, 25vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
           </div>
 
-          {/* 7 - Interior room */}
-          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:aspect-auto">
+          {/* 7 - Interior room: full-width banner on tablet, single cell on desktop */}
+          <div className="relative overflow-hidden rounded-md bg-white/5 aspect-square md:col-span-3 md:aspect-[16/5] lg:col-span-1 lg:aspect-auto">
             <Image
               src={gallery[6].src}
               alt={gallery[6].alt}
               fill
               className="object-cover hover:scale-105 transition duration-500"
-              sizes="(max-width: 768px) 50vw, 25vw"
+              sizes="(max-width: 768px) 50vw, (max-width: 1024px) 100vw, 25vw"
             />
           </div>
         </div>

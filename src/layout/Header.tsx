@@ -14,7 +14,7 @@ export default function Header() {
           >
             <Menu className="h-6 w-6" />
           </button>
-          <nav className="hidden md:flex items-center gap-6 font-inter text-sm text-white/90">
+          <nav className="hidden lg:flex items-center gap-6 font-inter text-sm text-white/90">
             <a href="#services" className="hover:text-brand transition">
               Our Service
             </a>
