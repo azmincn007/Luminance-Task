@@ -9,13 +9,13 @@ export const solutions: Solution[] = [
   {
     title: "Kitchens",
     description: "Designed for daily use, built for long-term performance",
-    image: "/assets/solution1.png",
+    image: "/assets/solution1.webp",
     icon: "/assets/solutionicon1.png",
   },
   {
     title: "Wardrobes & Closets",
     description: "Structured storage that stays organized over time",
-    image: "/assets/solution2.png",
+    image: "/assets/solution2.webp",
     icon: "/assets/solutionicon2.png",
   },
   {
